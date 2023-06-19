@@ -4,6 +4,7 @@ import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import { countPositiveFeedbackPercentage } from './utils/stats';
 import { countTotalFeedback } from './utils/stats';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 export class App extends Component {
   state = {
     good: 0,
@@ -35,21 +36,14 @@ export class App extends Component {
         }}
       >
         <h2>Please leave feedback</h2>
-        <div className="buttons-wrap">
-          <Button
-            name={this.getButtonName(0)}
-            incrementStat={this.incrementStat}
-          />
-          <Button
-            name={this.getButtonName(1)}
-            incrementStat={this.incrementStat}
-          />
-          <Button
-            name={this.getButtonName(2)}
-            incrementStat={this.incrementStat}
-          />
-        </div>
+        <FeedbackOptions
+          className="buttons-wrap"
+          incrementStat={this.incrementStat}
+          options={this.state}
+        />
+
         <h2>Statistics</h2>
+
         {totalFeedbacks ? (
           <Statistics
             stats={this.state}

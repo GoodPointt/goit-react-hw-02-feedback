@@ -1,13 +1,9 @@
 import css from './Button.module.css';
 
-export const Button = ({ name, incrementStat }) => {
+export const Button = ({ children, onClick }) => {
   return (
-    <button
-      type="button"
-      className={css.button}
-      onClick={() => incrementStat(name)}
-    >
-      {name}
+    <button type="button" className={css.button} onClick={onClick}>
+      {children}
     </button>
   );
 };
