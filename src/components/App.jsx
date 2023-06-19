@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { Button } from './Button/Button';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import { countPositiveFeedbackPercentage } from './utils/stats';
