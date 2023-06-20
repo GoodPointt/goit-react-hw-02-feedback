@@ -13,7 +13,7 @@ export const Statistics = ({ stats, totalFeedbacks, positivePercentage }) => {
         ))}
       </ul>
       <h4>Total feedbacks: {totalFeedbacks}</h4>
-      <h4>Positive feedback: {positivePercentage}%</h4>
+      <h4>Positive feedback: {positivePercentage}</h4>
     </>
   );
 };
