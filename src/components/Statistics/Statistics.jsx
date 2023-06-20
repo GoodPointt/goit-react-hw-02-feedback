@@ -1,4 +1,7 @@
 import { getColorByStat } from 'components/utils/stats';
+
+import PropTypes from 'prop-types';
+
 import css from './Statistics.module.css';
 
 export const Statistics = ({ stats, totalFeedbacks, positivePercentage }) => {
@@ -16,4 +19,10 @@ export const Statistics = ({ stats, totalFeedbacks, positivePercentage }) => {
       <h4>Positive feedback: {positivePercentage}</h4>
     </>
   );
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  totalFeedbacks: PropTypes.number,
+  positivePercentage: PropTypes.string,
 };

@@ -3,10 +3,12 @@ import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
+
 import {
   countPositiveFeedbackPercentage,
   countTotalFeedback,
 } from './utils/stats';
+
 export class App extends Component {
   state = {
     good: 0,
@@ -28,12 +30,10 @@ export class App extends Component {
       <div className="root__div">
         <Section title="Please leave feedback">
           <FeedbackOptions
-            className="buttons-wrap"
             incrementStat={this.incrementStat}
             options={this.state}
           />
         </Section>
-
         <Section title="Statistics">
           {totalFeedbacks ? (
             <Statistics
